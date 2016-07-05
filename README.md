@@ -1,5 +1,5 @@
 # pyusesthis
-A simple Python 3 wrapper around The [Setup's API](https://usesthis.com/api/)
+A simple Python 3 wrapper around [The Setup's API](https://usesthis.com/api/)
 
 Some very basic examples:
 ```python
