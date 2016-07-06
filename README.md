@@ -25,4 +25,16 @@ A small, more complete example:
 >>> for elem in varb['gear']['interviews']:
 ...     print(elem['name'])
 ```
+
+If you want something a bit more 'fuzzy', I was interested in all the Thinkpad
+models that were mentioned on The Setup:
+```python
+>>> import json
+>>> import pyusesthis
+>>> vara = pyusesthis.get_hardware("all")
+>>> varb = json.loads(vara)
+>>> for elem in varb['gear']:
+...     if 'thinkpad' in str(elem['name']).lower():
+...         print(elem['name'])
+```
 The API returns JSON, so that's what you get for further processing.
