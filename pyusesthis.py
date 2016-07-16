@@ -9,7 +9,8 @@ API_VERSION = "v1"
 USESTHIS_API_URL = "{}/{}".format(BASE_URL, API_VERSION)
 
 
-def _get_content(content_name, content_category, year="1978"):
+def _get_content(content_name: str, content_category: str,
+                 year: str="1978") -> str:
     """
     Craft the appropriate URL for each API call
     Retrieve the content from the URL, decode it as UTF-8
@@ -37,7 +38,7 @@ def _get_content(content_name, content_category, year="1978"):
     return content
 
 
-def get_hardware(hardware_name):
+def get_hardware(hardware_name: str) -> str:
     """
     Process the input so each word is separated by a dot and lowercased
     Call the _get_content() function with the proper content_category parameter
@@ -49,7 +50,7 @@ def get_hardware(hardware_name):
     return output
 
 
-def get_software(software_name):
+def get_software(software_name: str) -> str:
     """
     Process the input so each word is separated by a dash and lowercased
     Call the _get_content() function with the proper content_category parameter
@@ -61,7 +62,7 @@ def get_software(software_name):
     return output
 
 
-def get_interviews(interviewee_name):
+def get_interviews(interviewee_name: str) -> str:
     """
     Process the input so each word is separated by a dot and lowercased
     Call the _get_content() function with the proper content_category parameter
@@ -73,7 +74,7 @@ def get_interviews(interviewee_name):
     return output
 
 
-def get_stats(stat_name, stat_year="1978"):
+def get_stats(stat_name: str, stat_year: str="1978") -> str:
     """
     Process the input so each word is lowercased
     Call the _get_content() function with the proper content_category parameter
@@ -90,7 +91,7 @@ def get_stats(stat_name, stat_year="1978"):
     return output
 
 
-def get_categories(category_name):
+def get_categories(category_name: str) -> str:
     """
     Process the input so each word is lowercased
     Call the _get_content() function with the proper content_category parameter

@@ -38,3 +38,16 @@ models that were mentioned on The Setup:
 ...         print(elem['name'])
 ```
 The API returns JSON, so that's what you get for further processing.
+
+Basic [mypy](https://github.com/python/mypy) support is implemented
+(spoiler alert: it's all strings), so you can sanity check your code:
+```sh
+(venv) $ cat demo.py
+import pyusesthis
+
+pyusesthis.get_stats("software", 2015)
+pyusesthis.get_hardware(['Thinkpad x220', 'Thinkpad x230'])
+(venv) $ mypy demo.py
+demo.py:3: error: Argument 2 to "get_stats" has incompatible type "int"; expected "str"
+demo.py:4: error: Argument 1 to "get_hardware" has incompatible type List[str]; expected "str"
+```
