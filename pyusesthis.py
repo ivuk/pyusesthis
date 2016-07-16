@@ -10,7 +10,7 @@ USESTHIS_API_URL = "{}/{}".format(BASE_URL, API_VERSION)
 
 
 def _get_content(content_name: str, content_category: str,
-                 year: str ="1978") -> str:
+                 year: str="1978") -> str:
     """
     Craft the appropriate URL for each API call
     Retrieve the content from the URL, decode it as UTF-8
@@ -74,7 +74,7 @@ def get_interviews(interviewee_name: str) -> str:
     return output
 
 
-def get_stats(stat_name: str, stat_year: str ="1978") -> str:
+def get_stats(stat_name: str, stat_year: str="1978") -> str:
     """
     Process the input so each word is lowercased
     Call the _get_content() function with the proper content_category parameter
