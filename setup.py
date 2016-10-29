@@ -16,6 +16,7 @@ setup(
     author='Igor Vuk',
     author_email='parcijala+pyusesthis@gmail.com',
     license='MIT',
+    packages=['pyusesthis'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
