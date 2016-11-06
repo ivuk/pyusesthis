@@ -6,7 +6,7 @@ import urllib.request
 
 BASE_URL = "https://usesthis.com/api"
 API_VERSION = "v1"
-USESTHIS_API_URL = "{}/{}".format(BASE_URL, API_VERSION)
+USESTHIS_API_URL = "{}".format(BASE_URL)
 
 
 def _get_content(content_name: str, content_category: str,
