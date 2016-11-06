@@ -3,7 +3,7 @@ A simple Python 3 wrapper around [The Setup's API](https://usesthis.com/api/)
 
 Some very basic examples:
 ```python
->>> import pyusesthis
+>>> from pyusesthis import pyusesthis
 >>> print(pyusesthis.get_interviews("Amanda Cohen"))
 >>> print(pyusesthis.get_interviews("all"))
 >>> print(pyusesthis.get_hardware("Zaggfolio iPad 2"))
@@ -19,7 +19,7 @@ Note that 'all' is used as a keyword for getting all the available items.
 A small, more complete example:
 ```python
 >>> import json
->>> import pyusesthis
+>>> from pyusesthis import pyusesthis
 >>> vara = pyusesthis.get_hardware("thinkpad x220")
 >>> varb = json.loads(vara)
 >>> for elem in varb['gear']['interviews']:
@@ -30,7 +30,7 @@ If you want something a bit more 'fuzzy', I was interested in all the Thinkpad
 models that were mentioned on The Setup:
 ```python
 >>> import json
->>> import pyusesthis
+>>> from pyusesthis import pyusesthis
 >>> vara = pyusesthis.get_hardware("all")
 >>> varb = json.loads(vara)
 >>> for elem in varb['gear']:
