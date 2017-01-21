@@ -51,3 +51,10 @@ pyusesthis.get_hardware(['Thinkpad x220', 'Thinkpad x230'])
 demo.py:3: error: Argument 2 to "get_stats" has incompatible type "int"; expected "str"
 demo.py:4: error: Argument 1 to "get_hardware" has incompatible type List[str]; expected "str"
 ```
+
+There are some basic unit and integration API tests available in the `tests` directory.
+To run them, simply use:
+```sh
+$ cd tests
+$ pytest -v
+```
